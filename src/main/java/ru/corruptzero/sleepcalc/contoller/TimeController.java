@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import ru.corruptzero.sleepcalc.service.impl.TimeServiceImpl;
+import ru.corruptzero.sleepcalc.service.TimeService;
 
 import java.time.LocalTime;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.List;
 public class TimeController {
 
     @Autowired
-    TimeServiceImpl service;
+    TimeService service;
 
     @GetMapping
     public List<LocalTime> getSleepTimes(@RequestParam(required = false) LocalTime time){
